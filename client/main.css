@@ -1,0 +1,28 @@
+/* CSS declarations go here */
+.chat {
+	height: 400px;
+	width: 400px;
+	background: gray;
+}
+.messages {
+	height: 400px;
+	overflow-y: auto;
+}
+input {
+	padding-top: 0px;
+	border: 1px solid black;
+	width: 400px;
+}
+.username {
+	color:blue;
+}
+.message-text {
+	border-top: 2px solid red
+	color: black;
+}
+.more-messages{
+	position: absolute;
+	background: red;
+	margin-top: -40px;
+	margin-left: 130px;
+}

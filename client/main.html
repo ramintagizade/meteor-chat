@@ -1,0 +1,43 @@
+<head>
+  <title> Chat </title>
+</head>
+
+<body>
+  <div class="container">
+      <header>
+      <h1>Meteor Chat</h1>
+      {{> loginButtons}}
+    </header>
+      {{> messages}}
+      {{#momentum plugin="fade"}}
+        {{#if thereAreUnreadMessages}}
+          <button class="more-messages">New Messages &#x25BE;</button>
+        {{/if}}
+      {{/momentum}}
+  </div>
+
+</body>
+
+<template name="messages">
+     <div class="chat">
+      <div class="messages">
+        <ul style="list-style: none">
+          {{#each recentMessages}}
+            {{> message}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    {{#if currentUser}}
+    <div class="input">
+        <input type="text" placeholder="Add a message" />
+    </div>
+    {{/if}}
+</template>
+
+<template name="message">
+  <li>
+    <div class="username"> {{username}} </div>
+    <div class="message-text"> {{message}} </div>
+  </li>
+</template>
